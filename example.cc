@@ -5,7 +5,7 @@
 #include <cstdlib>
 #include "example.h"
 #include "time_state.h"
-#include "point_state.h"
+#include "point_fsm.h"
 
 //-----------------------------------------------------------------------------
 
@@ -20,8 +20,8 @@ int main(int argc, char **argv){
 	fprintf(stderr, "\nLaunching with an update resolution of %d ms.\n",ms_resolution);
 	
 	time_state * timer = new time_state();
-	point_state * point = new point_state();
-	
+	point_fsm * point = new point_fsm();
+		
 	while(1){		
 		timer->run();
 		point->run();
